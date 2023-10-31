@@ -1,56 +1,263 @@
-# Ex04 Places Around Me
-## AIM
+# Places Around Me
+## AIM:
 To develop a website to display details about the places around my house.
 
-## DESIGN STEPS
+## Design Steps:
 
-### STEP 1
-Create a Django admin interface.
+### Step 1:
+Write your own steps here.
+### Step 2:
+Add a new imagemap html file in templates and neede images in static folder and define it in settings.
+### Step 3:
+Type ur image map code in the html with coordinates and target file to redirect on click
 
-### STEP 2
-Download your city map from Google.
+### Step 4:
+Define your components pages and create content in such a way that it gives information about place which is being clicked
 
-### STEP 3
-Using ```<map>``` tag name the map.
+### Step 5:
+Include pictures and contents for your subpages and map them using urls and views
 
-### STEP 4
-Create clickable regions in the image using ```<area>``` tag.
-
-### STEP 5
-Write HTML programs for all the regions identified.
-
-### STEP 6
-Execute the programs and publish them.
-
-## CODE
-
+## Code:
+```
+map
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Map</title>
-</head>
-<body>
-    <img src="Map.png" usemap="#image-map">
-
-    <map name="image-map">
-        <area target="_blank" alt="Chennai Central" title="Chennai Central" href="https://www.google.co.in/maps/place/Central+Railway+Station/@13.0823063,80.2755963,15.78z/data=!4m14!1m7!3m6!1s0x3a5265ffee00643b:0x392710ab0f3eeffd!2sCentral+Railway+Station!8m2!3d13.083397!4d80.276202!16s%2Fg%2F11byl4s_jc!3m5!1s0x3a5265ffee00643b:0x392710ab0f3eeffd!8m2!3d13.083397!4d80.276202!16s%2Fg%2F11byl4s_jc?entry=ttu" coords="962,331,1127,450" shape="rect">
-        <area target="_blank" alt="Chennai Port" title="Chennai Port" href="https://www.google.co.in/maps/place/CHENNAI+PORT/@13.0823063,80.2755963,15.78z/data=!4m6!3m5!1s0x3a526f83c4dce21d:0x57cabad0ac5e38f2!8m2!3d13.0841394!4d80.2934778!16s%2Fg%2F11k8fg4g8v?entry=ttu" coords="1762,307,1876,413" shape="rect">
-        <area target="_blank" alt="Chennai Egmore " title="Chennai Egmore " href="https://www.google.co.in/maps/place/Chennai+Egmore/@13.0778715,80.2552492,15z/data=!4m6!3m5!1s0x3a526609638a76a5:0xa605f681010b8b85!8m2!3d13.0778704!4d80.2612511!16s%2Fg%2F1ptwx_b9q?entry=ttu" coords="87,666,263,723" shape="rect">
-        <area target="_blank" alt="Rajiv Gandhi Govt Hospital" title="Rajiv Gandhi Govt Hospital" href="https://www.google.co.in/maps/place/Rajiv+Gandhi+Government+General+Hospital/@13.0823063,80.2755963,15.78z/data=!4m14!1m7!3m6!1s0x3a5265ffee00643b:0x392710ab0f3eeffd!2sCentral+Railway+Station!8m2!3d13.083397!4d80.276202!16s%2Fg%2F11byl4s_jc!3m5!1s0x3a5268aabbad9a9f:0xf749acda22be400d!8m2!3d13.0810567!4d80.2781508!16zL20vMGQycWdk?entry=ttu" coords="1031,487,1192,567" shape="rect">
-        <area target="_blank" alt="Fort St. George Museum" title="Fort St. George Museum" href="https://www.google.co.in/maps/place/Fort+St.George+Museum/@13.0823063,80.2755963,15.78z/data=!4m14!1m7!3m6!1s0x3a5265ffee00643b:0x392710ab0f3eeffd!2sCentral+Railway+Station!8m2!3d13.083397!4d80.276202!16s%2Fg%2F11byl4s_jc!3m5!1s0x3a5268ad0fe75195:0x4cff4a37449c92fd!8m2!3d13.0806383!4d80.2876185!16zL20vMDJ5Njhs?entry=ttu" coords="1444,495,1647,597" shape="rect">
-        <area target="_blank" alt="Nehru Stadium" title="Nehru Stadium" href="https://www.google.co.in/maps/place/Jawaharlal+Nehru+Stadium/@13.0823063,80.2755963,15.78z/data=!4m14!1m7!3m6!1s0x3a5265ffee00643b:0x392710ab0f3eeffd!2sCentral+Railway+Station!8m2!3d13.083397!4d80.276202!16s%2Fg%2F11byl4s_jc!3m5!1s0x3a5265fbe6a909ab:0x5a6046dfc9f0d784!8m2!3d13.0857373!4d80.2717476!16zL20vMDc4YzV5?entry=ttu" coords="667,229,809,360" shape="rect">
-    </map>
-</body>
+<html>
+    <head>
+        <title>
+            IMAGE MAPS
+        </title>
+    </head>
+    <body>
+         <h1 align="center" >
+            <font color="red" >
+                    Image Map Of My Home Town
+            </font>
+        </h1>
+         <h3 align="center">
+        <font color="blue" face ="cursive">
+            Jeevansurya (212222040061)
+        </font>
+        </h3>
+        <center>
+           <img id="Image-Maps-Com-image-maps-2023-05-17-040541" src="/static/image/map.jpg" border="0" width="1902" height="878" orgWidth="1902" orgHeight="878" usemap="#image-maps-2023-05-17-040541" alt="" />
+<map name="image-maps-2023-05-17-040541" id="ImageMapsCom-image-maps-2023-05-17-040541">
+<area  alt="" title="GROUND" href="ground.html" shape="rect" coords="200,369,260,417" style="outline:none;" target="_self"     />
+<area  alt="" title="SCHOOL" href="school.html" shape="rect" coords="740,261,783,314" style="outline:none;" target="_self"     />
+<area  alt="" title="OFFICE" href="office.html" shape="rect" coords="1287,666,1372,721" style="outline:none;" target="_self"     />
+<area  alt="" title="HOSTEL" href="hostel.html" shape="rect" coords="1407,267,1492,322" style="outline:none;" target="_self"     />
+<area  alt="" title="FOOD" href="food.html" shape="rect" coords="1664,459,1749,514" style="outline:none;" target="_self"     />
+<area shape="rect" coords="1900,876,1902,878" alt="Image Map" style="outline:none;" title="Image Map" href="https://www.image-maps.com/" />
+</map>
+        </center>
+         <p align="center">
+            <font color="maroon"  face="Comic Sans MS" >
+                This Image Map shows various locations around my home.<br>
+                Click the location and get information about it.
+            </font>
+        </p>
+    </body>
 </html>
-## OUTPUT
-![image](https://github.com/jeevansurya30/NearMe/assets/129417865/b8b3720d-c127-4bc8-be93-a245b0116a75)
-![image](https://github.com/jeevansurya30/NearMe/assets/129417865/0221bbac-2272-43de-95db-6ff32ca9715f)
+
+ground
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            GROUND
+        </title>
+
+    </head>
+    <body bgcolor ="cyan">
+        <h1 align="center">
+            <font color = "blue">
+                <b>
+                    THIRUPATHUR
+                </b>
+            </font>
+            <h1>
+            <h3 align="center">
+            <font color = "red">
+                <b>
+                   GROUND
+                </b>
+            </font>
+            
+        </h3>
+<hr size="3" color="orange">
+<p align="justify">
+    <font face="Courier New" size="5">
+        <b>
+            A playground is a place where kids can play. Typically, they have playthings for kids to use, like slides, swings, and seesaws. A playground can improve your pavement surface and make your kids enjoy the playground more. Usually, they are outside, but occasionally, they are inside a building.
+
+The playthings could be made of plastic, wood, or metal. If a youngster falls, the surface beneath the apparatus won’t be hard. You might find sand, woodchips, or a rubber floor there. You might find sand, woodchips, or a rubber floor there
+        </b>
+    </font>
+</p>
+    </body>
+</html>
+
+school
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            SCHOOL
+        </title>
+
+    </head>
+    <body bgcolor ="cyan">
+        <h1 align="center">
+            <font color = "blue">
+                <b>
+                    THIRUPATHUR
+                </b>
+            </font>
+            <h1>
+            <h3 align="center">
+            <font color = "red">
+                <b>
+                   SCHOOL
+                </b>
+            </font>
+            
+        </h3>
+<hr size="3" color="orange">
+<p align="justify">
+    <font face="Courier New" size="5">
+        <b>
+            School is the place where we learn to read and write. It is the most crucial place for a student, and it helps us to learn new things. The teachers are always helpful and teach us important things in life. We must always be regular to school as missing classes can lead to problems during exams.21
+        </b>
+    </font>
+</p>
+    </body>
+</html>
+
+office
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            OFFICE
+        </title>
+
+    </head>
+    <body bgcolor ="cyan">
+        <h1 align="center">
+            <font color = "blue">
+                <b>
+                    THIRUPATHUR
+                </b>
+            </font>
+            <h1>
+            <h3 align="center">
+            <font color = "red">
+                <b>
+                   COLLECTOR 
+                   OFFICE
+                </b>
+            </font>
+            
+        </h3>
+<hr size="3" color="orange">
+<p align="justify">
+    <font face="Courier New" size="5">
+        <b>
+            The seat of the District Collector/District Magistrate in india is usually located in the district headquarters, which is the administrative center of the district. The District Collector's office is commonly referred to as the Collector's Office or the District Collectorate or DC Office, etc.
+
+Deputy Commissioner (DC) is a post that is primarily used in the states of Assam, Punjab, Haryana, Himachal Pradesh, and Karnataka in India. The role of a Deputy Commissioner is similar to that of a District Collector in other states of India.
+
+In these states, the Deputy Commissioner is responsible for the overall administration of the district and has a wide range of responsibilities
+        </b>
+    </font>
+</p>
+    </body>
+</html>
+
+school
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            HOSTEl
+        </title>
+
+    </head>
+    <body bgcolor ="cyan">
+        <h1 align="center">
+            <font color = "blue">
+                <b>
+                    THIRUPATHUR
+                </b>
+            </font>
+            <h1>
+            <h3 align="center">
+            <font color = "red">
+                <b>
+                   HOSTEL
+                </b>
+            </font>
+            
+        </h3>
+<hr size="3" color="orange">
+<p align="justify">
+    <font face="Courier New" size="5">
+        <b>
+           It teaches them a sense of responsibility and they become self-dependent. Hostel life teaches many lessons — self-dependence, self-reliance, and disciplined way of life. Most importantly they will adjust to all kinds of situations.20
+        </b>
+    </font>
+</p>
+    </body>
+</html>
+
+food
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            FOOD
+        </title>
+
+    </head>
+    <body bgcolor ="cyan">
+        <h1 align="center">
+            <font color = "blue">
+                <b>
+                    THIRUPATHUR
+                </b>
+            </font>
+            <h1>
+            <h3 align="center">
+            <font color = "red">
+                <b>
+                   FOOD
+                </b>
+            </font>
+            
+        </h3>
+<hr size="3" color="orange">
+<p align="justify">
+    <font face="Courier New" size="5">
+        <b>
+            Food is the substance we eat every day for energy and strength. There are many different types of food, such as fruits, vegetables, rice, and pasta. We need to eat a variety of foods to get all the essential nutrients the body needs. Not eating a healthy and balanced diet leads to weakness and deficiency diseases.
+        </b>
+    </font>
+</p>
+    </body>
+</html>
+```
+
+## Output:
+![image](https://github.com/jeevansurya30/NearMe/assets/120780633/7c6a6645-a2ff-49b5-93e1-39f2748b9655)
+![image](https://github.com/jeevansurya30/NearMe/assets/120780633/f5d2d9dc-0b7e-4b42-b9c0-51a23cfd8f09)
+![image](https://github.com/jeevansurya30/NearMe/assets/120780633/b71b8ad3-37ad-49c0-8858-3e941a9309c8)
+
+![image](https://github.com/jeevansurya30/NearMe/assets/120780633/57e6f775-b038-4b27-954b-a708aefdec40)
+![image](https://github.com/jeevansurya30/NearMe/assets/120780633/71a59caf-aaf9-4ff7-9f8f-ddf4954e9d02)
+![image](https://github.com/jeevansurya30/NearMe/assets/120780633/e7caef13-6ac8-4328-b7dc-d8d411a1846f)
 
 
-## HTML VALIDATOR
 
 
-## RESULT
-The program for implementing image maps using HTML is executed successfully.
+
+## Result:
+The program for implementing image map is executed successfully
